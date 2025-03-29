@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Configuración de la página
 st.set_page_config(   
@@ -27,3 +28,29 @@ st.markdown("""
 
 st.header("Solución")
 
+st.subheader("1. Crea DataFrames desde diccionario")
+
+
+code = '''
+# Crear un diccionario
+datos = {"Nombre": ["Ana", "Juan", "Pedro"],
+         "Edad": [25, 30, 35],
+         "Ciudad": ["Madrid", "Barcelona", "Sevilla"]}
+
+# Convertir el diccionario a un DataFrame
+df = pd.DataFrame(datos)
+
+st.dataframe(df)
+'''
+st.code(code, language="python")
+
+st.write("Resultado")
+# Crear un diccionario
+datos = {"Nombre": ["Ana", "Juan", "Pedro"],
+         "Edad": [25, 30, 35],
+         "Ciudad": ["Madrid", "Barcelona", "Sevilla"]}
+
+# Convertir el diccionario a un DataFrame
+df = pd.DataFrame(datos)
+
+st.dataframe(df)
