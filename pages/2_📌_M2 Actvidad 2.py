@@ -28,7 +28,7 @@ st.markdown("""
 
 st.header("Solución")
 
-df = pd.read_csv('datasets/refugio_animales.csv')
+df = pd.read_csv('static/datasets/refugio_animales.csv')
 
 st.dataframe(df)
 
